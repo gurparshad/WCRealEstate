@@ -1,6 +1,8 @@
 const app = require("./src/app");
-const sequelize = require("./src/config/database");
+const { sequelize } = require("./models");
 
-sequelize.sync();
-
-app.listen(3001, () => console.log("app is running"));
+app.listen(3001, async () => {
+  console.log("app is running");
+  await sequelize.authenticate();
+  console.log("database connected");
+});

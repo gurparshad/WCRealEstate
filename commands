@@ -1,0 +1,8 @@
+1. to create a model with sequelize
+        sequelize model:generate --name <nameOfYourModel> --attributes atr1:string,atr2:string
+
+2. undo latest migration
+        sequelize db:migrate:undo
+
+3. undo all migrations
+        sequelize db:migrate:undo:all

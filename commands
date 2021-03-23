@@ -6,3 +6,10 @@
 
 3. undo all migrations
         sequelize db:migrate:undo:all
+
+4. sequelize init
+        to initailize sequelize
+
+5. sequelize db:migrate
+        to create the tables in database.
+6. 

@@ -28,4 +28,28 @@ router.post(
   },
 );
 
+router.get("/api/1.0/property/getAllPictures/:propertyId", async (req, res) => {
+  const { propertyId } = req.params;
+  try {
+    const pictures = await Picture.findAll({
+      where: { propertyId: propertyId },
+    });
+    return res.json(pictures);
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json(err);
+  }
+});
+
+router.delete("/api/1.0/property/deletePicture/:photoId", async (req, res) => {
+  const { photoId } = req.params;
+  try {
+    await Picture.destroy({ where: { id: photoId } });
+    return res.json("image deleted");
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json(err);
+  }
+});
+
 module.exports = router;

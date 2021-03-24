@@ -28,6 +28,7 @@ router.post(
   },
 );
 
+// get all pictures of a property
 router.get("/api/1.0/property/getAllPictures/:propertyId", async (req, res) => {
   const { propertyId } = req.params;
   try {
@@ -41,6 +42,7 @@ router.get("/api/1.0/property/getAllPictures/:propertyId", async (req, res) => {
   }
 });
 
+// delete a picture
 router.delete("/api/1.0/property/deletePicture/:photoId", async (req, res) => {
   const { photoId } = req.params;
   try {
@@ -51,5 +53,21 @@ router.delete("/api/1.0/property/deletePicture/:photoId", async (req, res) => {
     return res.status(500).json(err);
   }
 });
+
+// delete picture with photourl
+router.delete(
+  "/api/1.0/property/deletePictureByUrl/:photoUrl",
+  async (req, res) => {
+    const { photoUrl } = req.params;
+    console.log("+++++++==", photoUrl);
+    try {
+      await Picture.destroy({ where: { photourl: photoUrl } });
+      return res.json("image deleted");
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  },
+);
 
 module.exports = router;

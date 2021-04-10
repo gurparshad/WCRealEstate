@@ -9,17 +9,17 @@ Note - Run the commands without the quotes
 1. Clone the repository by using the commannd "git clone https://github.com/gurparshad/visioncraft-assignement-backend.git"
 
 2. Download and install node js and npm (node package manager) https://nodejs.org/en/download Verify the installation by running the following commands in command promt.
-    - "node –v"
-    - "npm –v" 
-    If installation is successfull above commands will return teh versions of node and npm resp.
+   - "node –v"
+   - "npm –v" 
+ If installation is successfull above commands will return teh versions of node and npm resp.
     
 3. To install all the dependencies run the command "npm install" from inside the project root directory.
 
 ## Setting up the database
 
 1. Download and Install mysql and MysQL workbench
-    - Download mysql for windows https://dev.mysql.com/downloads/mysql/
-    - for mac Linux Install: http://bit.ly/2DijNpJ , Workbench Install: http://bit.ly/2B153d8 
+    - for windows server and workbench https://dev.mysql.com/downloads/mysql/
+    - for Linux server Install: http://bit.ly/2DijNpJ , Workbench Install: http://bit.ly/2B153d8 
     - for Mac Server Install: http://bit.ly/2PU2IZU , Workbench Install: http://bit.ly/2B2xiZ2 
  
 2. Create a database schema through the command line or MySQL workbench.

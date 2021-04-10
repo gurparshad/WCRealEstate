@@ -1,20 +1,22 @@
 # WCRealEstate-Backend
 This is the backend API for the World Class Real Estate Project.
 
-note - All teh commands needed to be run without the quotes
+Note - Run the commands without the quotes
 
 ## Steps to set up the application
 1. Clone the repository by using the commannd "git clone https://github.com/gurparshad/visioncraft-assignement-backend.git"
-2. To install all teh dependencies run the command "npm install" 
+2. Download and install node js and npm (node package manager) https://nodejs.org/en/download
+3. To install all the dependencies run the command "npm install" 
 
 ## Setting up the database
-1. Create a database schema through the command line or MySQL workbench.
-2. Change the environment variables in the .env file located in the root directory.
+1. Install mysql and MysQL workbench
+2. Create a database schema through the command line or MySQL workbench.
+3. Change the environment variables in the .env file located in the root directory.
     DATABASE_DEV = nameOfYourDatabase
     DATABASE_USERNAME = yourDatabaeUsername
     DATABASE_PASSWORD = yourDatabasePassword
     DATABASE_DIALECT = yourDatabaseDialect (mysql if using mysql database)
-3. Run the command "npx sequelize-cli db:migrate" The database will be created with three tables - users, properties and pictures.
+4. Run the command "npx sequelize-cli db:migrate" The database will be created with three tables - users, properties and pictures.
 
 ## Start the application
 Run command "npm start"

@@ -24,11 +24,11 @@ Note - Run the commands without the quotes
  
 2. Create a database schema through the command line or MySQL workbench.
 
-3. Change the environment variables in the .env file located in the root directory.
-    - DATABASE_DEV = nameOfYourDatabase
-    - DATABASE_USERNAME = yourDatabaeUsername
-    - DATABASE_PASSWORD = yourDatabasePassword
-    - DATABASE_DIALECT = yourDatabaseDialect (mysql if using mysql database)
+3. Change the configuration in the config.json file located in rootDirectory/config
+    - database = nameOfYourDatabase
+    - username = yourDatabaeUsername
+    - password = yourDatabasePassword
+    - dialect = yourDatabaseDialect (mysql if using mysql database)
    
 4. Run the command "npx sequelize-cli db:migrate" The database will be created with three tables - users, properties and pictures.
 
